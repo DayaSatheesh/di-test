@@ -19,7 +19,7 @@ public class DiTestApplication {
 		
 		PropertyInjectedController propCtroller = (PropertyInjectedController)ctx.getBean("propertyInjectedController");
 		System.out.println(propCtroller.hello());
-		System.out.println(propCtroller.geGreetingService().getClass().getName());
+		System.out.println(propCtroller.getGreetingService().getClass().getName());
 		
 		SetterInjectedController setterCtroller = (SetterInjectedController)ctx.getBean("setterInjectedController");
 		System.out.println(setterCtroller.hello());

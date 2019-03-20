@@ -1,6 +1,7 @@
 package tut.springframework.di.ditest.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import tut.springframework.di.ditest.services.GreetingService;
@@ -9,13 +10,14 @@ import tut.springframework.di.ditest.services.GreetingService;
 public class PropertyInjectedController {
 
 	@Autowired
-	private GreetingService greetingService;
+	//@Qualifier("greetingServiceImpl")
+	public	GreetingService greetingService;
 	
 	public String hello(){
 		return greetingService.greet();
 	}
 	
-	public GreetingService geGreetingService(){
+	public GreetingService getGreetingService(){
 		return greetingService;
 	}
 	

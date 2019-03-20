@@ -1,5 +1,6 @@
 package tut.springframework.di.ditest.controllers;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import tut.springframework.di.ditest.services.GreetingService;
@@ -8,8 +9,8 @@ import tut.springframework.di.ditest.services.GreetingService;
 public class ConstructorInjectedController {
 	
 	private GreetingService greetingService;
-	
-	public ConstructorInjectedController(GreetingService greetingService){
+	//@Qualifier("constructorGreetingServiceImpl")
+	public ConstructorInjectedController( GreetingService greetingService){
 		this.greetingService = greetingService;
 	}
 	

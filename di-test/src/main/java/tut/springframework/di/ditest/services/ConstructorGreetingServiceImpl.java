@@ -1,0 +1,16 @@
+package tut.springframework.di.ditest.services;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
+
+@Service
+@Profile("en")
+@Primary
+public class ConstructorGreetingServiceImpl implements GreetingService {
+
+	public String greet() {
+		return "ConstructorGreetingServiceImpl - welcome to greeting service";
+	}
+
+}
